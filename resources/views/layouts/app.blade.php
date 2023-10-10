@@ -27,6 +27,7 @@
 </head>
 
 <body class="light">
+    @auth
     <nav class="navbar navbar-expand-md navbar-dark shadow-sm" style="background-color: #242F40">
         <div class="container">
             <a class="navbar-brand" href="{{ route('home') }}">
@@ -73,6 +74,7 @@
             </div>
         </div>
     </nav>
+    @endauth
     <main>
         @yield('content')
     </main>

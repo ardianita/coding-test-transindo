@@ -4,6 +4,7 @@ use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SaleController;
 use App\Http\Controllers\TrashController;
 
 /*
@@ -19,8 +20,10 @@ use App\Http\Controllers\TrashController;
 
 Auth::routes();
 
-Route::view('/', 'welcome');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+Route::get('/', [SaleController::class, 'create'])->name('sale.create');
+Route::post('/sales/store', [SaleController::class, 'store'])->name('sale.store');
 
 Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
 Route::get('/categories/create', [CategoryController::class, 'create'])->name('categories.create');

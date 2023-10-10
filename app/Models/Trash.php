@@ -17,4 +17,9 @@ class Trash extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    public function sales()
+    {
+        return $this->hasMany(Sales::class);
+    }
 }
