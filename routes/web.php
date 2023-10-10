@@ -19,6 +19,7 @@ use App\Http\Controllers\TrashController;
 
 Auth::routes();
 
+Route::view('/', 'welcome');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');

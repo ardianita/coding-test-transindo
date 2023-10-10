@@ -27,7 +27,6 @@
 </head>
 
 <body class="light">
-    @if (Route::has('home'))
     <nav class="navbar navbar-expand-md navbar-dark shadow-sm" style="background-color: #242F40">
         <div class="container">
             <a class="navbar-brand" href="{{ route('home') }}">
@@ -74,7 +73,6 @@
             </div>
         </div>
     </nav>
-    @endif
     <main>
         @yield('content')
     </main>
@@ -92,9 +90,6 @@
     <script>
         let table = new DataTable('#myTable');
     </script>
-</body>
-
-</html>
 </body>
 
 </html>
